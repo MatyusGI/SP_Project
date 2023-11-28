@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+<!--    <link rel="stylesheet" href="('styles.css')" />-->
+
+      <style>
+          body{
+              background-color:#FFE4E1;
+            }
+
+            header{
+              font-family:Roboto;
+              font-size:26px;
+              color:black;
+              font-weight:bold;
+              text-align:center;
+              margin-top:20px;
+              margin-bottom:20px;
+            }
+
+            #survey-form{
+              background-color:#FFFFFF;
+              font-family:Quicksand;
+              max-width:70%;
+              margin:auto;
+              padding:0;
+              border-radius:15px;
+            }
+
+            #description{
+              text-align:center;
+              font-size:16px;
+              padding-top:17px;
+              padding-left: 200px;
+              padding-right: 200px;
+              font-weight:bold;
+            }
+
+            .fieldset{
+              border-width:0;
+              padding-top:1%;
+
+            }
+
+            .sub-group{
+              position:relative;
+              right:30px;
+              display:flex;
+              justify-content:center;
+              flex-wrap:wrap;
+              padding:1%;
+            }
+
+            label.left{
+              width:30%;
+              padding-right:4%;
+              text-align:right;
+            }
+
+
+            .right{
+              width:30%;
+            }
+
+            .input-field{
+              height:20px;
+              padding:5px;
+              border: 1px solid #c0c0c0;
+              border-radius: 2px;
+            }
+
+            #dropdown{
+              font-family:Quicksand;
+              height:30px;
+              border: 1px solid #c0c0c0;
+              border-radius: 2px;
+            }
+
+            .checkbox{
+              position:relative;
+              padding:3px;
+              right:3px;
+              bottom:15px;
+            }
+
+            .radio{
+              position:relative;
+              padding:3px;
+              bottom:15px;
+            }
+
+            h2{
+              position:relative;
+              bottom:8px;
+              font-size:16px;
+              text-align:center;
+              font-weight:bold;
+            }
+
+            .commentbox{
+              text-align:center;
+            }
+
+            textarea{
+              width:65%;
+              border-radius:4px;
+            }
+
+            #submit{
+              background:#FFE4E1;
+              font-family:Roboto;
+              border-radius:4px;
+              font-size:23px;
+            }
+
+            label:hover{
+              cursor:pointer;
+            }
+
+            @media (max-width: 800px) {
+              body {
+                font-size: 12px;
+              }
+            }
+
+            @media (max-width: 580px) {
+              body {
+                font-size: 9px;
+              }
+            }
+      </style>
+  </head>
+  <body>
+  <header>
+      <div id="title"><h1>Survey Form</h1></div>
+    </header>
+
+<form action='/predict' id="survey-form" method="POST">
+
+  <div id="description"> Di bawah ini adalah daftar pernyataan yang berhubungan dengan perasaan umum Anda terhadap diri sendiri.
+    Silahkan tunjukkan seberapa kuat Anda setuju atau tidak setuju dengan setiap pernyataan.</div><br>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio1">Secara keseluruhan, saya puas dengan diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio2">Kadang-kadang saya pikir saya tidak baik sama sekali.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons2" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons2" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons2" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons2" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio3">Saya merasa bahwa saya memiliki sejumlah kualitas yang baik.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons3" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons3" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons3" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons3" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio4">Saya mampu melakukan banyak hal sebaik kebanyakan orang lainnya.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons4" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons4" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons4" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons4" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio5">Saya merasa tidak punya banyak hal untuk dibanggakan.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons5" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons5" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons5" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons5" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio6">Tentu saja saya kadang-kadang merasa tidak berguna.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons6" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons6" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons6" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons6" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio7">Saya merasa bahwa saya adalah orang yang berharga, setidaknya sejajar dengan orang lain.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons7" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons7" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons7" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons7" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio8">Saya berharap saya bisa lebih menghormati diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons8" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons8" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons8" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons8" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio9">Secara keseluruhan, saya cenderung merasa bahwa saya gagal.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons9" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons9" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons9" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons9" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+  <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio10">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons10" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons10" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons10" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons10" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio11">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons11" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons11" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons11" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons11" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio12">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons12" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons12" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons12" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons12" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio13">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons13" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons13" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons13" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons13" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio14">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons14" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons14" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons14" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons14" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio15">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons15" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons15" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons15" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons15" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio16">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons16" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons16" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons16" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons16" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio17">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons17" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons17" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons17" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons17" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+  <div class="sub-group">
+  <label class="left" id="left-radio18">Saya mengambil sikap positif terhadap diri saya sendiri.</label>
+
+   <ul style="list-style: none" class="right">
+       <li class="radio"><label><input name="radio-buttons18" value="1" type="radio" class="recommendation">Sangat setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons18" value="2" type="radio" class="recommendation">Setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons18" value="3" type="radio" class="recommendation">Tidak setuju</label></li>
+       <li class="radio"><label><input name="radio-buttons18" value="4" type="radio" class="recommendation">Sangat Tidak setuju</label></li>
+   </ul>
+  </div></fieldset>
+
+    <fieldset class="fieldset">
+   <h2>Any comments or suggestions?</h2>
+
+    <div class="commentbox">
+
+<!--   <textarea rows="4"  placeholder="Enter your comment here..."></textarea>-->
+
+   <br></br>
+
+  <button id="submit" type="submit">Predict</button>
+       </div></fieldset>
+
+</form>
+
+  <br><h4 align="center"><b>{{pred}}</b></h4>
+  <br>
+
+</div>
+  </body>
+</html>
